@@ -5,6 +5,7 @@ package bank;
  * @author 
  */
 public class Account {
+    //cislo uctu
     private double balance = 0;
 
     public Account() {
@@ -19,6 +20,7 @@ public class Account {
     }
     
     public void withdraw(double amount) {
+        //dat vedet ze se nepovedlo
         if (balance >= amount) {
             balance -= amount;
         } 

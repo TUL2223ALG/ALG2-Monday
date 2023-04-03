@@ -1,6 +1,7 @@
 package bank;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -8,7 +9,7 @@ import java.util.ArrayList;
  */
 public abstract class Client implements Comparable<Client>{
     protected String name;
-    ArrayList<Account> accounts = new ArrayList<>();
+    List<Account> accounts = new ArrayList<>();
 
     public Client(String name) {
         this.name = name;
