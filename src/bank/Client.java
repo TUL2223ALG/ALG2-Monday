@@ -6,9 +6,9 @@ import java.util.ArrayList;
  *
  * @author 
  */
-public abstract class Client {
+public abstract class Client implements Comparable<Client>{
     protected String name;
-    ArrayList<Account> accounts;
+    ArrayList<Account> accounts = new ArrayList<>();
 
     public Client(String name) {
         this.name = name;
@@ -25,6 +25,17 @@ public abstract class Client {
         }
         return totalSum;
     }
+
+    @Override
+    public int compareTo(Client c) {
+        return Double.compare(this.getTotalBalance(), c.getTotalBalance());
+    }
+
+    @Override
+    public String toString() {
+        return getInfo() + " má celkem: " + getTotalBalance() + "kč";
+    }
+    
     
     public abstract String getInfo();
 }
